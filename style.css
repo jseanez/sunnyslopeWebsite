@@ -1,0 +1,145 @@
+/* nav bar css */
+  header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li:first-child {
+    margin-right: auto;
+  }
+  
+  nav ul li {
+    margin-left: 0px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: all 0.3s ease;
+    font-family: Roboto, sans-serif;
+  }
+  
+  a:hover {
+    color: orange;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .dropdown:hover ul {
+    display: block;
+  }
+  
+  .dropdown ul li {
+    margin: 0;
+  }
+  
+  .dropdown ul li a {
+    padding: 5px 0;
+  }
+  
+  .right-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .right-menu li {
+    margin-left: -10px;
+  }
+  
+  .right-menu li:first-child {
+    margin-left: 0;
+  }  
+
+  /* Media Queries for Dropdown Menu */
+
+  @media screen and (min-width: 1050px) {
+    .dropdownBtn{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    #calendar {
+        display: none;
+    }
+    .homeDrop, .districtSiteDrop, .schoolBoardDrop, .covidDrop, .supportStaffDrop{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    #supportStaff {
+        display: none;
+    }
+    .supportStaffDrop{
+        display: block;
+    }
+    .homeDrop, .districtSiteDrop, .schoolBoardDrop, .covidDrop{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    #covid {
+        display: none;
+    }
+    .covidDrop{
+        display: block;
+    }
+    .homeDrop, .districtSiteDrop, .schoolBoardDrop{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    #home {
+        display: none;
+    }
+    .homeDrop{
+        display: block;
+    }
+    .districtSiteDrop, .schoolBoardDrop{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 675px) {
+    #schoolBoard {
+        display: none;
+    }
+    .schoolBoardDrop{
+        display: block;
+    }
+    .districtSiteDrop{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 505px) {
+    #districtSite{
+        font-size: 12px;
+        text-align: center;
+    }
+    .sunnyslope-elementary{
+        text-align: center;
+    }
+  }
+
